@@ -1,0 +1,15 @@
+.root {
+  display: flex;
+  padding: 5px;
+}
+
+.routeWrapper {
+  display: flex;
+  flex: 1;
+  background-color: rgb(235, 227, 227);
+  height: calc(100vh - 60px);
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 25px;
+  
+}

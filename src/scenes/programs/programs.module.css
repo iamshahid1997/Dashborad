@@ -1,0 +1,219 @@
+.root {
+  display: flex;
+  flex: 1;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 2px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: auto;
+  width:300px;
+  max-width: 300px;
+}
+
+.overview .programCardsWrapper{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 25px;
+  margin-top: 10px;
+}
+
+.desktopOverview {
+  display: flex;
+}
+
+.mobileOverview {
+  display: none;
+}
+
+.toggleButton {
+  all: unset;
+  color: #10ADB9;
+  position: absolute;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  padding: 2px 5px;
+  font-size: small;
+  align-items: center;
+  margin-left: -25px;
+  
+}
+
+@media only screen and (max-width: 800px) {
+  .desktopOverview {
+    display: none;
+  }
+
+  .mobileOverview {
+    display: flex;
+  }
+
+  .overview {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    height: 100vh;
+    padding-left: 5px;
+    
+  }
+
+  .overviewClose {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    font-size: small;
+    background-color: #D4F5EE;
+    font-weight: 400;
+  }
+
+  .overview.open {
+    transform: translateX(0);
+  }
+}
+
+.programOverviewWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 7px 2px;
+  background-color: white;
+  border-radius: 15px;
+  overflow: auto;
+}
+
+.programOverviewWrapper .title {
+  font-size: medium;
+  padding: 0px 15px;
+}
+
+.programOverviewWrapper .programCardsWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 0px 15px;
+  margin-top: 10px;
+}
+
+.programCard {
+  all: unset;
+  cursor: pointer;
+  display: flex;
+  width: 240px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.programCard:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+
+/* .programCard:hover .idWrapper {
+  background-color: #10ADB9;
+}
+
+.programCard:hover .rightArrow {
+  color: #10ADB9;
+} */
+
+.programCard .idWrapper {
+  display: flex;
+  flex: 0.22;
+  background-color: #D4F5EE;
+  align-items: center;
+  justify-content: center;
+  font-size: large;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.programCard .cardContent {
+  flex:  0.73;
+  padding: 2px 0px 7px 10px;
+}
+
+.programCard .rightArrow {
+  color: #D4F5EE;
+  padding: 0px;
+}
+
+.programCard .header {
+  display: flex;
+  justify-content: space-between;
+  font-size: small;
+}
+
+.programCard .footer {
+  margin-top: 5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: x-small;
+}
+
+.programCard .footerItem {
+  display: flex;
+  align-items: center;
+}
+
+.programInfoWrapper {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.programInfoWrapper .header{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.programInfoWrapper .header .headerIcon {
+  font-size: x-large;
+  color: dimgray;
+}
+
+.programInfoWrapper .header .headerIcon:not(:last-child) {
+  margin-right: 10px;
+}
+
+
+.marketResearch {
+  display: flex;
+  margin-top: 5%;
+  padding: 0px 10%;
+  flex-direction: column;
+  overflow: auto;
+}
+
+.marketResearch .tabsWrapper {
+  display: flex;
+  margin-bottom: 3%;
+}
+
+.marketResearch .tabWrapper {
+  all: unset;
+  flex: 1;
+  color: grey;
+  border-bottom: 5px solid;
+  justify-content: center;
+  text-align: center;
+}
+
+.marketResearch .tabTitle {
+  font-size: medium;
+  padding: 10px 10px;
+}
+
+.marketResearchTab1 {
+ text-align: justify;
+}
